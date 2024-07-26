@@ -1,5 +1,6 @@
 import 'package:flashy_tab_bar2/flashy_tab_bar2.dart';
 import 'package:flutter/material.dart';
+import 'package:fta/screen/history/history.dart';
 import 'package:fta/screen/home/home.dart';
 
 class TabPage extends StatefulWidget {
@@ -14,7 +15,7 @@ class _TabPageState extends State<TabPage> {
 
   List<Widget> tabItems = [
     Home(),
-    Center(child: Text("1")),
+    FlightHistory(),
     Center(child: Text("2")),
   ];
 
@@ -26,10 +27,11 @@ class _TabPageState extends State<TabPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xffF0C0E7),
+      backgroundColor:
+          _selectedIndex == 1 ? const Color(0xffE8D9D5) : Color(0xffF0C0E7),
       body: tabItems[_selectedIndex],
       bottomNavigationBar: FlashyTabBar(
-        backgroundColor: const Color(0xffF0C0E7),
+        backgroundColor:_selectedIndex == 1 ? const Color(0xffE8D9D5) : const Color(0xffF0C0E7),
 
         animationCurve: Curves.elasticIn,
         selectedIndex: _selectedIndex,
