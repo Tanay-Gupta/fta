@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fta/screen/home/home.dart';
+import 'package:fta/screen/splashScreen.dart';
 import 'package:fta/screen/tab_bar.dart';
 
 void main() {
@@ -12,11 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flight Status Tracker',
-      // theme: ThemeData(
-      //   colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-      //   useMaterial3: true,
-      // ),
-      home: const TabPage(),
+      home: TabPage(),
     );
   }
 }
