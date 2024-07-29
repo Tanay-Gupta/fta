@@ -2,9 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:fta/screen/home/home.dart';
 import 'package:fta/screen/splashScreen.dart';
 import 'package:fta/screen/tab_bar.dart';
+import 'services/api_service.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {

@@ -19,6 +19,18 @@ class CurrentFlightStatus extends StatelessWidget {
                 fontFamily: 'MadeTommy',
                 fontWeight: FontWeight.w600),
           ),
+          actions: [
+            IconButton(
+                onPressed: () {
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    const SnackBar(
+                      content: Text('You have subscribed to this flight updates'),
+                    ),
+                  );
+                },
+                icon: const Icon(Icons.notifications_none_outlined,
+                    color: Colors.black, size: 30)),
+          ],
         ),
         body: const SizedBox(
           width: double.infinity,

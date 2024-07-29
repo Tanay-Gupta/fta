@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fta/screen/home/component/flight_status.dart';
 import 'package:fta/screen/home/component/loyalty_points.dart';
+import 'package:fta/screen/search/search.dart';
 
 class Home extends StatelessWidget {
   const Home({Key? key}) : super(key: key);
@@ -25,7 +26,7 @@ class Home extends StatelessWidget {
             child: Column(
               // mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.start,
-              children: <Widget>[
+              children: [
                 //------------------------------------------------------------------------------------------------
                 const SizedBox(height: 5),
                 const Text('Hi there,',
@@ -40,29 +41,38 @@ class Home extends StatelessWidget {
                         fontWeight: FontWeight.w500)),
                 //----------------------------------------Search Bar--------------------------------------------------------
                 const SizedBox(height: 20),
-                Container(
-                  height: 50,
-                  padding: const EdgeInsets.all(10),
-                  decoration: BoxDecoration(
-                    color: const Color(0xffEBB1EA),
-                    borderRadius: BorderRadius.circular(8),
-                  ),
-                  child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      Image.asset(
-                        "assets/icons/search.png",
-                        height: 28,
-                      ),
-                      const SizedBox(width: 15),
-                      const Text('Search flights',
-                          style: TextStyle(
-                              fontSize: 16,
-                              fontFamily: 'MadeTommy',
-                              fontWeight: FontWeight.w400)),
-                    ],
+                InkWell(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => SearchScreen()));
+                  },
+                  child: Container(
+                    height: 50,
+                    padding: const EdgeInsets.all(10),
+                    decoration: BoxDecoration(
+                      color: const Color(0xffEBB1EA),
+                      borderRadius: BorderRadius.circular(8),
+                    ),
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Image.asset(
+                          "assets/icons/search.png",
+                          height: 28,
+                        ),
+                        const SizedBox(width: 15),
+                        const Text('Search flights',
+                            style: TextStyle(
+                                fontSize: 16,
+                                fontFamily: 'MadeTommy',
+                                fontWeight: FontWeight.w400)),
+                      ],
+                    ),
                   ),
                 ),
+
                 //---------------------------------------Flight Status---------------------------------------------------------
                 const SizedBox(height: 20),
                 const FlightStatusDetailBox(),
