@@ -6,7 +6,7 @@ class Box2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 300,
+      height: 320,
       width: double.infinity,
       padding: const EdgeInsets.all(20),
       decoration: BoxDecoration(

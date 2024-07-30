@@ -9,7 +9,7 @@ class FlightStatusDetailBox extends StatelessWidget {
   Widget build(BuildContext context) {
     return Material(
       color: const Color(0xffE8AAD9),
-           borderRadius: BorderRadius.circular(17),
+      borderRadius: BorderRadius.circular(17),
       child: InkWell(
         borderRadius: BorderRadius.circular(17),
         onTap: () {
@@ -21,7 +21,6 @@ class FlightStatusDetailBox extends StatelessWidget {
           );
         },
         child: Container(
-          
           height: 150,
           // decoration: BoxDecoration(
           //   color: const Color(0xffE8AAD9),
@@ -51,14 +50,15 @@ class FlightStatusDetailBox extends StatelessWidget {
                         color: const Color(0xffCC95BF),
                       ),
                     ),
-                    const SizedBox(height: 4),
+                  const SizedBox(height: 4),
                   Container(
                     height: 15,
                     width: 15,
                     decoration: BoxDecoration(
-                     // color: const Color(0xffCC95BF),
+                      // color: const Color(0xffCC95BF),
                       borderRadius: BorderRadius.circular(100),
-                      border: Border.all(color: const Color(0xffCC95BF), width: 2.5),
+                      border: Border.all(
+                          color: const Color(0xffCC95BF), width: 2.5),
                     ),
                   ),
                 ],
@@ -92,16 +92,22 @@ class FlightStatusDetailBox extends StatelessWidget {
                 ],
               ),
               const Spacer(),
-              Column(
+              const Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  SizedBox(
-                    height: 50,
-                    child:
-                        Lottie.asset('assets/icons/Animation - 1722004490349.json'),
-                  ),
-                  const SizedBox(height: 20),
-                  const Text('9:15',
+                  SizedBox(height: 10),
+                  Text('B07',
+                      style: TextStyle(
+                          fontSize: 18,
+                          fontFamily: 'MadeTommy',
+                          fontWeight: FontWeight.w600)),
+                  Text('Gate',
+                      style: TextStyle(
+                          fontSize: 14,
+                          fontFamily: 'MadeTommy',
+                          fontWeight: FontWeight.w500)),
+                  SizedBox(height: 20),
+                  Text('9:15',
                       style: TextStyle(
                           fontSize: 20,
                           fontFamily: 'MadeTommy',
@@ -112,15 +118,13 @@ class FlightStatusDetailBox extends StatelessWidget {
                           fontSize: 14,
                           fontFamily: 'MadeTommy',
                           fontWeight: FontWeight.w500)),
-                           const SizedBox(height: 10),
+                  const SizedBox(height: 10),
                 ],
-              )
+              ),
+              const SizedBox(width: 20),
             ],
           ),
         ),
-      
-      
-      
       ),
     );
   }

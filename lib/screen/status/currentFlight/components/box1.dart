@@ -6,7 +6,7 @@ class Box1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 300,
+      height: 320,
       width: double.infinity,
       padding: const EdgeInsets.all(20),
       decoration: BoxDecoration(
@@ -152,6 +152,18 @@ class Box1 extends StatelessWidget {
                           fontFamily: 'MadeTommy',
                           fontWeight: FontWeight.w500)),
                   Text('13:56',
+                      style: TextStyle(
+                          color: Color.fromARGB(255, 117, 156, 120),
+                          fontSize: 14,
+                          fontFamily: 'MadeTommy',
+                          fontWeight: FontWeight.w400)),
+                  SizedBox(height: 20),
+                  Text('B07',
+                      style: TextStyle(
+                          fontSize: 18,
+                          fontFamily: 'MadeTommy',
+                          fontWeight: FontWeight.w500)),
+                  Text('Gate',
                       style: TextStyle(
                           color: Color.fromARGB(255, 117, 156, 120),
                           fontSize: 14,
