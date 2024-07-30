@@ -2,6 +2,7 @@ import 'package:flashy_tab_bar2/flashy_tab_bar2.dart';
 import 'package:flutter/material.dart';
 import 'package:fta/screen/history/history.dart';
 import 'package:fta/screen/home/home.dart';
+import 'package:fta/services/notification.dart';
 
 class TabPage extends StatefulWidget {
   const TabPage({super.key});
@@ -16,11 +17,12 @@ class _TabPageState extends State<TabPage> {
   List<Widget> tabItems = [
     Home(),
     FlightHistory(),
-    Center(child: Text("2")),
+    Center(child: Text("Search")),
   ];
 
   @override
   void initState() {
+    NotificationServices.askForNotificationPermission();
     super.initState();
   }
 

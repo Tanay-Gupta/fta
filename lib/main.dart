@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:fta/screen/home/home.dart';
 import 'package:fta/screen/splashScreen.dart';
 import 'package:fta/screen/tab_bar.dart';
+import 'package:fta/services/notification.dart';
 import 'services/api_service.dart';
 
 void main() {
@@ -13,6 +14,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      navigatorKey: NotificationServices.globalKey,
+      debugShowCheckedModeBanner: false,
       title: 'Flight Status Tracker',
       home: TabPage(),
     );

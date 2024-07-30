@@ -3,6 +3,8 @@ import 'package:flutter/widgets.dart';
 import 'package:fta/screen/status/currentFlight/components/box1.dart';
 import 'package:fta/screen/status/currentFlight/components/box2.dart';
 
+import '../../../services/notification.dart';
+
 class CurrentFlightStatus extends StatelessWidget {
   const CurrentFlightStatus({super.key});
 
@@ -22,9 +24,79 @@ class CurrentFlightStatus extends StatelessWidget {
           actions: [
             IconButton(
                 onPressed: () {
+                  // NotificationServices.sendInstantNotification(
+                  //   title: "Flight Delayed",
+                  //   body:
+                  //       "Your flight XJ-123 from Gorakhpur to Delhi is delayed by 2 hours. New departure time is 12:00 PM.",
+                  //   payload: "Test payload",
+                  // );
+
+                  // NotificationServices.sendInstantNotification(
+                  //   title: "Flight Canceled",
+                  //   body:
+                  //       "We regret to inform you that your flight XJ-123 from Gorakhpur to Delhi has been canceled. Please contact customer service for rebooking options.",
+                  //   payload: "Test payload",
+                  // );
+
+                  NotificationServices.sendInstantNotification(
+                    title: "Gate Change",
+                    body:
+                        "Flight XJ-123 from Gorakhpur to Delhi will now depart from gate B15 (was A3).",
+                    payload: "Test payload1",
+                  );
+
+                  // NotificationServices.sendInstantNotification(
+                  //   title: "Boarding Now",
+                  //   body:
+                  //       "Your flight XJ-123 from Gorakhpur to Delhi is now boarding. Please proceed to gate B15.",
+                  //   payload: "Test payload",
+                  // );
+
+                  // NotificationServices.sendInstantNotification(
+                  //   title: "Final Boarding Call",
+                  //   body:
+                  //       "Final call for boarding flight XJ-123 from Gorakhpur to Delhi. Please proceed to gate B15 immediately.",
+                  //   payload: "Test payload",
+                  // );
+
+                  // NotificationServices.sendInstantNotification(
+                  //   title: "On-Time Departure",
+                  //   body:
+                  //       "Good news! Your flight XJ-123 from Gorakhpur to Delhi is on time. Please arrive at the gate by 10:30 AM.",
+                  //   payload: "Test payload",
+                  // );
+
+                  // NotificationServices.sendInstantNotification(
+                  //   title: "Schedule Change",
+                  //   body:
+                  //       "Your flight XJ-123 from Gorakhpur to Delhi has a new departure time: 11:30 AM. Please check in accordingly.",
+                  //   payload: "Test payload",
+                  // );
+
+                  // NotificationServices.sendInstantNotification(
+                  //   title: "Weather Delay",
+                  //   body:
+                  //       "Due to bad weather conditions, your flight XJ-123 from Gorakhpur to Delhi is delayed. We will update you with the new departure time shortly.",
+                  //   payload: "Test payload",
+                  // );
+
+                  // NotificationServices.sendInstantNotification(
+                  //   title: "Flight Resumed",
+                  //   body:
+                  //       "Your flight XJ-123 from Gorakhpur to Delhi has resumed its schedule. Please check the latest departure time.",
+                  //   payload: "Test payload",
+                  // );
+
+                  // NotificationServices.sendInstantNotification(
+                  //   title: "Check-In Reminder",
+                  //   body:
+                  //       "Reminder: Online check-in is now open for your flight XJ-123 from Gorakhpur to Delhi.",
+                  //   payload: "Test payload",
+                  // );
                   ScaffoldMessenger.of(context).showSnackBar(
                     const SnackBar(
-                      content: Text('You have subscribed to this flight updates'),
+                      content:
+                          Text('You have subscribed to this flight updates'),
                     ),
                   );
                 },
